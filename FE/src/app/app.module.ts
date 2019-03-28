@@ -23,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     ClientsComponent,
     FirstViewComponent,
     ContactComponent,
-    OfferComponent
+    OfferComponent,
     TesztMainPageComponent
   ],
   imports: [
@@ -32,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
     HttpClientModule
   ],
   providers: [RegisterService],
