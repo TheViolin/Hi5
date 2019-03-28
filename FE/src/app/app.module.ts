@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { TesztMainPageComponent } from './components/teszt-main-page/teszt-main-page.component';
 import { RegisterService } from './services/Register/register.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RegistrationPopUpComponent } from './components/registration-pop-up/registration-pop-up.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TesztMainPageComponent
+    TesztMainPageComponent,
+    RegistrationPopUpComponent
   ],
   imports: [
     BrowserModule,
