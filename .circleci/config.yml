@@ -11,25 +11,25 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - checkout
-      - run: 
-          name: Backend build
-          command: |
-            cd backend && npm install
-      - run: 
-          name: Backend Lint
-          command: |
-            cd backend && npm run lint
+    #  - checkout
+    #  - run: 
+    #      name: Backend build
+    #      command: |
+    #        cd backend && npm install
+    #  - run: 
+    #      name: Backend Lint
+    #      command: |
+     #       cd backend && npm run lint
      # - run: 
      #     name: Backend test
      #     command: |
      #      cd backend && npm test
-      - run: 
-          name: Frontend build
-          command: |
-            cd frontend && npm install
-      - run: 
-          name: Frontend Lint
-          command: |
-            cd frontend && npm run lint
+    #  - run: 
+      #    name: Frontend build
+      #    command: |
+      #      cd frontend && npm install
+    #  - run: 
+     #     name: Frontend Lint
+      #    command: |
+       #     cd frontend && npm run lint
      # - run: cd frontend && npm run test
