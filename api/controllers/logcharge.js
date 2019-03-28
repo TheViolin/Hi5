@@ -29,6 +29,7 @@ const Log = require('../models/log');
 // }
 
 exports.logCharge = (req, res, next) => {
+  console.log('here I am at the controller');
   const log = new Log({
     _id: mongoose.Types.ObjectId(),
     user: req.userData.userId,
