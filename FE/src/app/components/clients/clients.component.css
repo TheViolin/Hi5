@@ -17,6 +17,9 @@ body {
   width:100%;
   border-radius: 50%;
 }
+h3{
+  text-transform: uppercase;
+}
 
 blockquote svg.svg-inline--fa {
   color: #176cb6;
