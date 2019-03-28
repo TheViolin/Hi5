@@ -4,9 +4,8 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-//const productRoutes = require('./api/routes/products');
-//const orderRoutes = require('./api/routes/orders');
 const userRoutes = require('./api/routes/user');
+const logChargeRoutes = require('./api/routes/logcharge');
 
 mongoose.connect(
   'mongodb+srv://hackathon:' +
@@ -33,9 +32,8 @@ app.use((req, res, next) => {
   next();
 });
 
-//app.use('/products', productRoutes);
-//app.use('/orders', orderRoutes);
 app.use('/user', userRoutes);
+app.use('/logcharge', logChargeRoutes);
 
 app.use((req, res, next) => {
   const error = new Error('Not found.');
