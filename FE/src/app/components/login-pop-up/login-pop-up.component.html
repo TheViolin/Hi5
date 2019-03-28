@@ -2,20 +2,18 @@
   crossorigin="anonymous">
 
 <div class="modal-header">
-  <h4 class="modal-title">Registration</h4>
+  <h4 class="modal-title">Login</h4>
 </div>
 <div class="modal-body">
   <form>
     <p>E-mail</p>
     <input #email id="email" type="email">
-    <p>Username</p>
-    <input #username id="username" type="text">
     <p>Password</p>
     <input #password id="password" type="password">
   </form>
 </div>
 <div class="modal-footer">
-  <button (click)="register(username.value, email.value, password.value)">
+  <button (click)="login(email.value, password.value)">
     Submit
   </button>
   <button (click)="closeModal()">

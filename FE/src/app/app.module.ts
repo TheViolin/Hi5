@@ -17,6 +17,7 @@ import { RegisterPopUpComponent } from './components/register-pop-up/register-po
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { FormsModule } from '@angular/forms';
+import { LoginPopUpComponent } from './components/login-pop-up/login-pop-up.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     FirstViewComponent,
     ContactComponent,
     OfferComponent,
-    TesztMainPageComponent
+    TesztMainPageComponent,
+    LoginPopUpComponent
   ],
   imports: [
     NgbModule.forRoot(),
@@ -47,7 +49,8 @@ import { FormsModule } from '@angular/forms';
   providers: [RegisterService, NgbActiveModal],
   bootstrap: [AppComponent],
   entryComponents: [
-    RegisterPopUpComponent
+    RegisterPopUpComponent,
+    LoginPopUpComponent
   ]
 })
 export class AppModule { }
