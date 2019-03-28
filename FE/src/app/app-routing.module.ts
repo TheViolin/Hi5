@@ -4,8 +4,8 @@ import { TesztMainPageComponent } from './components/teszt-main-page/teszt-main-
 import { RegisterPopUpComponent } from './components/register-pop-up/register-pop-up.component';
 
 const routes: Routes = [
-  {path: 'teszt', component: RegisterPopUpComponent}, 
-  {path: '', component: TesztMainPageComponent}
+  //{path: 'teszt', component: RegisterPopUpComponent}, 
+  //{path: '', component: TesztMainPageComponent}
 ];
 
 @NgModule({
