@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 const userRoutes = require('./api/routes/user');
 const logChargeRoutes = require('./api/routes/logcharge');
+const dataRoutes = require('./api/routes/data')
 
 mongoose.connect(
   'mongodb+srv://hackathon:' +
@@ -34,6 +35,7 @@ app.use((req, res, next) => {
 
 app.use('/user', userRoutes);
 app.use('/logcharge', logChargeRoutes);
+app.use('/', dataRoutes);
 
 app.use((req, res, next) => {
   const error = new Error('Not found.');
