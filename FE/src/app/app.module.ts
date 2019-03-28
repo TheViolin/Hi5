@@ -6,20 +6,29 @@ import { AppComponent } from './app.component';
 import { TesztMainPageComponent } from './components/teszt-main-page/teszt-main-page.component';
 import { RegisterService } from './services/Register/register.service';
 import { HttpClientModule } from '@angular/common/http';
-import { RegistrationPopUpComponent } from './components/registration-pop-up/registration-pop-up.component';
+import { RegisterPopUpComponent } from './components/register-pop-up/register-pop-up.component';
+import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TesztMainPageComponent,
-    RegistrationPopUpComponent
+    RegisterPopUpComponent
   ],
   imports: [
+    NgbModule.forRoot(),
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [RegisterService],
-  bootstrap: [AppComponent]
+  providers: [RegisterService, NgbActiveModal],
+  bootstrap: [AppComponent],
+  entryComponents: [
+    RegisterPopUpComponent
+  ]
 })
 export class AppModule { }
