@@ -8,19 +8,27 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ClientsComponent } from './components/clients/clients.component';
+import { FirstViewComponent } from './components/first-view/first-view.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { OfferComponent } from './components/offer/offer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ClientsComponent
+    ClientsComponent,
+    FirstViewComponent,
+    ContactComponent,
+    OfferComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
