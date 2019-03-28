@@ -1,0 +1,26 @@
+.fixed {
+  background-image: url('../../../assets/business-car-computer-1305305.jpg');
+  opacity: 0.18;
+}
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 7rem 2rem;
+  z-index: -1111;
+}
+
+.fixed-background h3 {
+  margin-bottom: 2rem;
+}
+
+.fixed-background p {
+  margin-top: 1.5rem;
+}
+h3{
+  text-transform: uppercase;
+}
+i{
+  font-size: 300%;
+  color: #176cb6;
+}
