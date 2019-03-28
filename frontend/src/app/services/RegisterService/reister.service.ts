@@ -9,13 +9,13 @@ import { ErrorHandlingService } from '../ErrorHandlingService/error-handling.ser
 })
 export class RegisterService {
 
-  baseUrl = 'http://10.27.6.115:8080';
+  baseUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient,
     private errorHandlingService: ErrorHandlingService) { }
 
   register(username: string, email: string, password: string): Observable<Object> {
-    const url = this.baseUrl + `/api/user/register`;
+    const url = this.baseUrl + `/user/register`;
     const body = {
       'username': `${username}`,
       'email': `${email}`,
