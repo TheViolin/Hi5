@@ -28,6 +28,9 @@ blockquote svg.svg-inline--fa {
 .clients-hr{
   border-top: .05rem solid #176cb6;;
 }
+.jumbotron{
+margin-bottom: 1rem;
+}
 
 @media (max-width: 767px){
   .caption h1 {
