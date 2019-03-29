@@ -30,6 +30,7 @@ export class LoginPopUpComponent implements OnInit {
     this.loginService.login(username, password).subscribe(
       data => {
         localStorage.setItem('Token', `${data['token']}`);
+
         this.closeModal();
         this.router.navigateByUrl('/loggedin');
       })

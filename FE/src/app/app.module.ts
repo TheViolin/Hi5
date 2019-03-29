@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { LoginPopUpComponent } from './components/login-pop-up/login-pop-up.component';
 import { NewChargeComponent } from './components/new-charge/new-charge.component';
 import { LoggedOutComponent } from './components/logged-out/logged-out.component';
+import { LoggedInComponent } from './components/logged-in/logged-in.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { LoggedOutComponent } from './components/logged-out/logged-out.component
     TesztMainPageComponent,
     LoginPopUpComponent,
     NewChargeComponent,
-    LoggedOutComponent
+    LoggedOutComponent,
+    LoggedInComponent
   ],
   imports: [
     NgbModule.forRoot(),
@@ -54,7 +56,8 @@ import { LoggedOutComponent } from './components/logged-out/logged-out.component
   bootstrap: [AppComponent],
   entryComponents: [
     RegisterPopUpComponent,
-    LoginPopUpComponent
+    LoginPopUpComponent,
+    NewChargeComponent
   ]
 })
 export class AppModule { }
