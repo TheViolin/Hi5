@@ -3,13 +3,14 @@ const { expect } = require('chai');
 
 const app = require('../../app');
 
-const user = {
-  username: 'test1sdgksd;fg2',
-  password: 'test',
-};
+
 
 describe('POST /User/Login', () => {
   it('should get a status code \'200\' if user logged in successfully', (done) => {
+    const user = {
+      username: 'test1',
+      password: 'test',
+    };
     request(app)
       .post('/user/login')
       .set('Accept', 'application/json')
@@ -29,10 +30,14 @@ describe('POST /User/Login', () => {
 
   //token
   it('should get a status code \'500\' if user not in DB', (done) => {
+    const user2 = {
+      username: 'test15454365',
+      password: 'test',
+    };
     request(app)
       .post('/user/login')
       .set('Accept', 'application/json')
-      .send()
+      .send(user2)
       .expect('Content-Type', /json/)
       .expect(500)
       .end((err, res) => {
