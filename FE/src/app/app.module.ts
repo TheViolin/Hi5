@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TesztMainPageComponent } from './components/teszt-main-page/teszt-main-page.component';
 import { RegisterService } from './services/Register/register.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LoggedInComponent } from './components/logged-in/logged-in.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     FirstViewComponent,
     ContactComponent,
     OfferComponent,
-    TesztMainPageComponent
+    TesztMainPageComponent,
+    LoggedInComponent
   ],
   imports: [
     BrowserModule,
