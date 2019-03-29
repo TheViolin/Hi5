@@ -26,6 +26,9 @@
 
 .home-inner {
   background-image: url('../../../assets/akrales_170414__1610_0337.0.jpg');
+  opacity: 0.4;
+
+
 }
 
 .caption {
@@ -64,4 +67,24 @@
   background:  #176cb6;;
   border-color:  #176cb6;;
   color:white;
+}
+.fa {
+  font-size: 10rem;
+  margin: 1.6rem 10rem 5rem 5rem;
+}
+
+.fa:hover {
+  color: #176cb6
+}
+
+.fa-car {
+  color: grey;
+}
+
+.fa-leaf {
+  color: green
+}
+
+.fa-eur {
+  color: yellow
 }
