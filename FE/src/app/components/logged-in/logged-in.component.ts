@@ -10,7 +10,7 @@ import { GetDataService } from '../../services/GetData/get-data.service';
   styleUrls: ['./logged-in.component.scss']
 })
 export class LoggedInComponent implements OnInit {
-  //data: data[] =
+  incomeData = {};
 
   constructor(private modalService: NgbModal,
     private router: Router,
@@ -36,9 +36,11 @@ export class LoggedInComponent implements OnInit {
   }
 
   getData() {
-    let token = localStorage.getItem('token');
+    let token = localStorage.getItem('Token');
+    console.log(token);
     this.getService.getCharge(token).subscribe(
       data => {
+        this.incomeData = data
         //localStorage.setItem('Token', `${data.token}`);
         console.log(data);
       })
