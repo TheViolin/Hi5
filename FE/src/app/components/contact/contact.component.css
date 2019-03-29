@@ -1,25 +1,42 @@
-footer{
+footer {
   background-color: #40474e;
-  color:white;
+  color: white;
   padding: 2rem 0 2rem;
   margin-top: 1rem;
 }
-footer img{
+
+footer img {
   height: 4rem;
   margin: 1.5rem 0;
 }
-footer a{
-  color:white;
+
+footer a {
+  color: white;
 }
-footer svg.svg-inline--fa{
-  font-size: 1.6rem;
-  margin: 1.2rem .5rem 0 0;
-}
-footer svg.svg-inline--fa:hover{
-  color: #176cb6!important;
-}
-hr.socket{
+
+hr.socket {
   width: 100%;
   border-top: .2rem solid #666b71;
   margin-top: 3rem;
-}  
+}
+
+.fa {
+  font-size: 3rem;
+  margin: 1.6rem 1rem 0 0
+}
+
+.fa:hover {
+  color: #176cb6
+}
+
+.fa-facebook-square {
+  color: #3B5998
+}
+
+.fa-twitter-square {
+  color: #1dcaff
+}
+
+.fa-instagram {
+  color: #bc2a8d
+}
