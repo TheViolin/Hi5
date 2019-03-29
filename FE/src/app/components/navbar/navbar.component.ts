@@ -9,8 +9,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class NavbarComponent implements OnInit {
   closeResult: string;
-
   modalRef: NgbModal;
+  public loggedIn: boolean;
 
   constructor(
     private modalService: NgbModal
@@ -27,5 +27,10 @@ export class NavbarComponent implements OnInit {
     }).catch((error) => {
       console.log(error);
     });
+  }
+
+  logOut(){
+    this.loggedIn = false;
+    localStorage.clear();
   }
 }

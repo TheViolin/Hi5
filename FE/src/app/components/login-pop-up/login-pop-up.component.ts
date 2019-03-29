@@ -24,11 +24,13 @@ export class LoginPopUpComponent implements OnInit {
   }
 
 
-  login(email, password) {
-    this.loginService.login(email, password).subscribe(
+  login(username, password) {
+    this.loginService.login(username, password).subscribe(
       data => {
-        //localStorage.setItem('Token', `${data.token}`);
-        console.log('data');
+        localStorage.setItem('Token', `${data['token']}`);
+        // console.log(data);
+        // console.log(data['token']);
+        this.closeModal();
       })
   }
 
