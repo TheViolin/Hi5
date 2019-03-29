@@ -13,14 +13,14 @@ import { OfferComponent } from './components/offer/offer.component';
 import { TesztMainPageComponent } from './components/teszt-main-page/teszt-main-page.component';
 import { RegisterService } from './services/Register/register.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LoggedInComponent } from './components/logged-in/logged-in.component';
 import { RegisterPopUpComponent } from './components/register-pop-up/register-pop-up.component';
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-
 import { FormsModule } from '@angular/forms';
 import { LoginPopUpComponent } from './components/login-pop-up/login-pop-up.component';
 import { NewChargeComponent } from './components/new-charge/new-charge.component';
 import { LoggedOutComponent } from './components/logged-out/logged-out.component';
-import { LoggedInComponent } from './components/logged-in/logged-in.component';
+
 
 
 @NgModule({
@@ -38,6 +38,7 @@ import { LoggedInComponent } from './components/logged-in/logged-in.component';
     NewChargeComponent,
     LoggedOutComponent,
     LoggedInComponent
+
   ],
   imports: [
     NgbModule.forRoot(),

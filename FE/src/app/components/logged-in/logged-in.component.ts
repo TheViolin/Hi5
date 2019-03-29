@@ -10,7 +10,7 @@ import { GetDataService } from '../../services/GetData/get-data.service';
   styleUrls: ['./logged-in.component.scss']
 })
 export class LoggedInComponent implements OnInit {
-  incomeData = {};
+  incomeData: object = {};
 
   constructor(private modalService: NgbModal,
     private router: Router,
@@ -44,6 +44,6 @@ export class LoggedInComponent implements OnInit {
         //localStorage.setItem('Token', `${data.token}`);
         console.log(data);
       })
-  }
 
+}
 }
