@@ -1,18 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-@import '~bootstrap/dist/css/bootstrap.min.css';
 
-body {
-  overflow-x: hidden;
-  font-family: 'Lato', sans-serif;
-  color: #505962;
-}
-
-.offset:before {
-  display: block;
-  content: "";
-  height: 4rem;
-  margin-top: -4rem;
-}
 .clients img{
   width:100%;
   border-radius: 50%;
@@ -27,31 +13,4 @@ blockquote svg.svg-inline--fa {
 }
 .clients-hr{
   border-top: .05rem solid #176cb6;;
-}
-
-@media (max-width: 767px){
-  .caption h1 {
-    font-size: 2.3rem;
-    letter-spacing: .15rem;
-    padding-bottom: 0.5rem;
-  }
-  
-  .caption h3 {
-    font-size: 1.2rem;
-    padding-bottom: 1.2rem;
-  }
-  
-  .btn-lg {
-    padding: .5rem 1rem;
-    font-size: 1rem;
-  }
-  .narrow h1 {
-    font-size: 1.5rem;
-  }
-  .clients img{
-    width:50%;
-    display: block;
-    margin: 0 auto;
-  }
-
 }

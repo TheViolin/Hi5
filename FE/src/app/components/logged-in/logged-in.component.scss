@@ -1,3 +1,28 @@
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background: rgba(0, 0, 0, 0.6)!important;
+}
+
+.navbar-brand img {
+  height: 2.5rem;
+  width: 4rem;
+}
+
+.navbar-nav li {
+  padding-right: .7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  padding-top: 0.8rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link:hover {
+  color: #176cb6;;
+}
 
 .home-inner {
   background-image: url('../../../assets/akrales_170414__1610_0337.0.jpg');
