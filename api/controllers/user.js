@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
+const Log = require('../models/log');
 
 exports.user_register = (req, res, next) => {
   User.find({ username: req.body.username })
@@ -26,6 +27,14 @@ exports.user_register = (req, res, next) => {
               });
             user.save()
               .then(result => {
+                const initialLog = new Log({
+                  _id: new mongoose.Types.ObjectId(),
+                  user: result._id,
+                  odometer: 0,
+                  chargeAmount: 0,
+                  unitPrice: 0
+                });
+                initialLog.save();
                 console.log(result);
                 res.status(201).json({
                   message: 'User created.'
