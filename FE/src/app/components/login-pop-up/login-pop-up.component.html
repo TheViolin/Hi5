@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  crossorigin="anonymous">
+
+<div class="modal-header">
+  <h4 class="modal-title">Login</h4>
+</div>
+<div class="modal-body">
+  <form>
+    <p>E-mail</p>
+    <input #email id="email" type="email">
+    <p>Password</p>
+    <input #password id="password" type="password">
+  </form>
+</div>
+<div class="modal-footer">
+  <button (click)="login(email.value, password.value)">
+    Submit
+  </button>
+  <button (click)="closeModal()">
+    Cancel
+  </button>
+</div>
