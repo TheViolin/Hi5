@@ -1,43 +1,44 @@
 const request = require('supertest');
 const { expect } = require('chai');
+
 const app = require('../../app');
 
 const user = {
-  username: 'test12',
+  username: 'test1sdgksd;fg2',
   password: 'test',
 };
 
-describe('POST /User/Register', () => {
-  it('should get a status code \'409\' if username already exists', (done) => {
+describe('POST /User/Login', () => {
+  it('should get a status code \'200\' if user logged in successfully', (done) => {
     request(app)
-      .post('/user/register')
-      .send(user)
+      .post('/user/login')
       .set('Accept', 'application/json')
+      .send(user)
       .expect('Content-Type', /json/)
-      .expect(409)
+      .expect(201)
       .end((err, res) => {
         expect(res.body).to.be.an('object')
           .with.property('status')
           .that.is.a('string')
-          .that.equal('Username already exists.');
+          .that.equal('ok');
         if (err) return done(err);
         return done();
       });
-      done()
+    done()
   });
 
   //token
-  it('should get a status code \'409\' if user exists', (done) => {
+  it('should get a status code \'500\' if user not in DB', (done) => {
     request(app)
-      .post('/user/register')
-      .send(user)
+      .post('/user/login')
       .set('Accept', 'application/json')
+      .send()
       .expect('Content-Type', /json/)
-      .expect(409)
+      .expect(500)
       .end((err, res) => {
         expect(res.body).to.be.an('object')
           .with.property('status')
-          // .that.is.a('string')
+          .that.is.a('string')
           .that.equal('username already exists.');
         if (err) return done(err);
         return done();
