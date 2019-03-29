@@ -44,6 +44,6 @@ export class LoggedInComponent implements OnInit {
         //localStorage.setItem('Token', `${data.token}`);
         console.log(data);
       })
-  }
 
+}
 }

@@ -1,18 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-@import '~bootstrap/dist/css/bootstrap.min.css';
-
-body {
-  overflow-x: hidden;
-  font-family: 'Lato', sans-serif;
-  color: #505962;
-}
-
-.offset:before {
-  display: block;
-  content: "";
-  height: 4rem;
-  margin-top: -4rem;
-}
 
 .home-inner {
   background-image: url('../../../assets/akrales_170414__1610_0337.0.jpg');
