@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  crossorigin="anonymous">
+
+<div class="modal-header">
+  <h4 class="modal-title">New charge</h4>
+</div>
+<div class="modal-body">
+  <form>
+    <p>Distance</p>
+    <input #distance id="distance" type="number">
+    <p>Charge Amount</p>
+    <input #chargeAmount id="chargeAmount" type="number">
+    <p>Unit Price</p>
+    <input type="radio" name="price" id="Unit price" value="Unit price">
+    <label for="Unit price">Unit price</label><br>
+    <input type="radio" name="price" id="Free" value="Free">
+    <label for="Free">Free</label><br>
+  </form>
+</div>
+<div class="modal-footer">
+  <button (click)="addNewCharge(distance.value, chargeAmount.value, price.value)">
+    Upload
+  </button>
+  <button (click)="closeModal()">
+    Cancel
+  </button>
+</div>

@@ -18,6 +18,7 @@ import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { FormsModule } from '@angular/forms';
 import { LoginPopUpComponent } from './components/login-pop-up/login-pop-up.component';
+import { NewChargeComponent } from './components/new-charge/new-charge.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { LoginPopUpComponent } from './components/login-pop-up/login-pop-up.comp
     ContactComponent,
     OfferComponent,
     TesztMainPageComponent,
-    LoginPopUpComponent
+    LoginPopUpComponent,
+    NewChargeComponent
   ],
   imports: [
     NgbModule.forRoot(),

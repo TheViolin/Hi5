@@ -27,9 +27,8 @@ export class LoginPopUpComponent implements OnInit {
   login(email, password) {
     this.loginService.login(email, password).subscribe(
       data => {
-        localStorage.setItem('Token', `${data.token}`);
+        //localStorage.setItem('Token', `${data.token}`);
         console.log('data');
-        //this.router.navigateByUrl('ip/8080/');
       })
   }
 
