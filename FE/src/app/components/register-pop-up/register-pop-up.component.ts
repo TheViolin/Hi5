@@ -27,9 +27,10 @@ export class RegisterPopUpComponent implements OnInit {
   register(username, email, password) {
     this.registerService.register(username, email, password).subscribe(
       data => {
-        console.log('data');
+        //console.log(data);
         //this.router.navigateByUrl('ip/8080/');
       })
+      this.closeModal();
   }
 
 }

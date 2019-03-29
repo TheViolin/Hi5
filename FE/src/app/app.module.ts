@@ -18,6 +18,8 @@ import { RegisterPopUpComponent } from './components/register-pop-up/register-po
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { LoginPopUpComponent } from './components/login-pop-up/login-pop-up.component';
+import { NewChargeComponent } from './components/new-charge/new-charge.component';
+import { LoggedOutComponent } from './components/logged-out/logged-out.component';
 
 
 
@@ -32,8 +34,10 @@ import { LoginPopUpComponent } from './components/login-pop-up/login-pop-up.comp
     ContactComponent,
     OfferComponent,
     TesztMainPageComponent,
+    LoginPopUpComponent,
+    NewChargeComponent,
+    LoggedOutComponent,
     LoggedInComponent
-    LoginPopUpComponent
 
   ],
   imports: [
@@ -53,7 +57,8 @@ import { LoginPopUpComponent } from './components/login-pop-up/login-pop-up.comp
   bootstrap: [AppComponent],
   entryComponents: [
     RegisterPopUpComponent,
-    LoginPopUpComponent
+    LoginPopUpComponent,
+    NewChargeComponent
   ]
 })
 export class AppModule { }

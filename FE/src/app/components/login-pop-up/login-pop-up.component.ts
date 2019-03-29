@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { LoginService } from '../../services/Login/login.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,8 @@ export class LoginPopUpComponent implements OnInit {
 
   constructor(
     public activeModal: NgbActiveModal,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -24,12 +26,13 @@ export class LoginPopUpComponent implements OnInit {
   }
 
 
-  login(email, password) {
-    this.loginService.login(email, password).subscribe(
+  login(username, password) {
+    this.loginService.login(username, password).subscribe(
       data => {
-        localStorage.setItem('Token', `${data.token}`);
-        console.log('data');
-        //this.router.navigateByUrl('ip/8080/');
+        localStorage.setItem('Token', `${data['token']}`);
+
+        this.closeModal();
+        this.router.navigateByUrl('/loggedin');
       })
   }
 

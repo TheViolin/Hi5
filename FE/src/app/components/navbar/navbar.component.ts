@@ -9,11 +9,10 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class NavbarComponent implements OnInit {
   closeResult: string;
-
   modalRef: NgbModal;
 
   constructor(
-    private modalService: NgbModal
+    private modalService: NgbModal,
   ) { }
 
   ngOnInit() {
@@ -28,4 +27,5 @@ export class NavbarComponent implements OnInit {
       console.log(error);
     });
   }
+
 }
