@@ -26,7 +26,7 @@
 
 .home-inner {
   background-image: url('../../../assets/akrales_170414__1610_0337.0.jpg');
-  opacity: 0.8;
+  opacity: 0.2;
 }
 
 .caption {
@@ -75,25 +75,34 @@
   border-bottom:50px;
 }
 .fa:hover {
-  color: #176cb6
+  color: white;
 }
 
 .fa-car {
-  color: blue;
+  color: #176cb6;
+  padding-right: 6%;
 }
 
 .fa-leaf {
-  color: green
+  color: green;
+  padding-right: 3%;
 }
 
 .fa-eur {
-  color: yellow
+  color: yellow;
+  width: 1%;
 }
-
-@media (max-width: 767px){
-
-.fa{
-  display: block;
-  margin: 0 auto;
+.landing{
+  background: black;
 }
-  }
+i{
+  padding-top:5%;
+  width: 0.1%;
+}
+h6{
+  padding-top:5%;
+  display:inline-block;
+}
+.icons{
+  width:90%;
+}
