@@ -10,7 +10,10 @@ import { GetDataService } from '../../services/GetData/get-data.service';
   styleUrls: ['./logged-in.component.scss']
 })
 export class LoggedInComponent implements OnInit {
-  incomeData: object = {};
+  incomeData;
+  distance;
+  co;
+  money;
 
   constructor(private modalService: NgbModal,
     private router: Router,
@@ -37,10 +40,13 @@ export class LoggedInComponent implements OnInit {
 
   getData() {
     let token = localStorage.getItem('Token');
-    console.log(token);
     this.getService.getCharge(token).subscribe(
       data => {
-        this.incomeData = data
+        this.incomeData = data;
+        this.distance = this.incomeData.totalDistance;
+        this.co = this.incomeData.co2Saved;
+        this.money = this.incomeData.moneySaved;
+        console.log(this.incomeData)
         //localStorage.setItem('Token', `${data.token}`);
         console.log(data);
       })
