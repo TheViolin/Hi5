@@ -24,12 +24,13 @@ export class NewChargeComponent implements OnInit {
 
 
   addNewCharge(odometer, chargeAmount, price) {
-    let token = localStorage.getItem('token')
+    let token = localStorage.getItem('token');
     this.logChargeService.newCharge(odometer, chargeAmount, price, token).subscribe(
       data => {
         //localStorage.setItem('Token', `${data.token}`);
-        console.log('data');
+        console.log(data);
       })
+      this.closeModal();
   }
 
 }
