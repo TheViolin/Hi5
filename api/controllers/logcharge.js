@@ -25,27 +25,27 @@ exports.getLog = (req, res, next) => {
     });
 }
 
-// exports.logCharge = (req, res, next) => {
-//   const log = new Log({
-//     _id: mongoose.Types.ObjectId(),
-//     user: req.userData.userId,
-//     odometer: req.body.odometer,
-//     chargeAmount: req.body.chargeAmount,
-//     unitPrice: req.body.unitPrice
-//   });
-//   log.save()
-//     .then(result => {
-//       res.status(201).json({
-//         message: 'Charging logged successfully.'
-//       });
-//     })
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json({
-//         error: err
-//       });
-//     }); 
-// }
+exports.logCharge = (req, res, next) => {
+  const log = new Log({
+    _id: mongoose.Types.ObjectId(),
+    user: req.userData.userId,
+    odometer: req.body.odometer,
+    chargeAmount: req.body.chargeAmount,
+    unitPrice: req.body.unitPrice
+  });
+  log.save()
+    .then(result => {
+      res.status(201).json({
+        message: 'Charging logged successfully.'
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({
+        error: err
+      });
+    }); 
+}
 
 exports.logCharge = (req, res, next) => {
   Log.find().sort({ _id: -1 }).limit(1)
