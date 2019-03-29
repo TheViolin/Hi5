@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -11,7 +10,11 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { FirstViewComponent } from './components/first-view/first-view.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { OfferComponent } from './components/offer/offer.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TesztMainPageComponent } from './components/teszt-main-page/teszt-main-page.component';
+import { RegisterService } from './services/Register/register.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
     FirstViewComponent,
     ContactComponent,
     OfferComponent
+    TesztMainPageComponent
   ],
   imports: [
     BrowserModule,
@@ -29,8 +33,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     NgbModule.forRoot()
+    HttpClientModule
   ],
-  providers: [],
+  providers: [RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

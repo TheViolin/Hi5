@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ReisterService } from './reister.service';
+import { LogChargeService } from './log-charge.service';
 
-describe('ReisterService', () => {
+describe('LogChargeService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: ReisterService = TestBed.get(ReisterService);
+    const service: LogChargeService = TestBed.get(LogChargeService);
     expect(service).toBeTruthy();
   });
 });
