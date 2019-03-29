@@ -20,10 +20,10 @@ jobs:
     #      name: Backend Lint
     #      command: |
      #       cd backend && npm run lint
-      - run: 
-          name: Backend test
-          command: |
-           cd backend && npm test
+     # - run: 
+      #    name: Backend test
+       #   command: |
+        #   cd backend && npm test
     #  - run: 
       #    name: Frontend build
       #    command: |
