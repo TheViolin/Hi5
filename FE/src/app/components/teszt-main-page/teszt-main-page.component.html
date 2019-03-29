@@ -1,0 +1,14 @@
+<div>
+    <h1>Registration</h1>
+    <form action="">
+      <p>Username</p>
+      <input #username type="text" name="" id=""><br>
+      <p>E-mail</p>
+      <input #email type="email"><br>
+      <p>Password</p>
+      <input #password type="password"><br><br>
+      <button [routerLink]="['/']" (click)="register(username.value, email.value, password.value)">Registration</button>
+      <button [routerLink]="['/']">Cancel</button>
+    </form>
+  </div>
+  
